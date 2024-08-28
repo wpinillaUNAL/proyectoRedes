@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+
+    <script>
+        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+          key: "API KEY HERE",
+          v: "weekly",
+
+          // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+          // Add other bootstrap parameters as needed, using camel case.
+        });
+    </script>
+</head>
+<body>
+  <div id="divIzq">
+    <h1>Hola</h1>
+    <div id="floating-panel">
+      <b>Origen: </b>
+      <select id="start">
+        <option value='{"lat":4.6364, "lng":-74.0833}'>Universidad Nacional</option>
+        <option value='{"lat":4.649788993494426, "lng":-74.10199003801691}'>Gran Estación</option>
+        <option value='{"lat":4.602032367851377, "lng":-74.07218961588123}'>Museo del Oro</option>
+      </select>
+      <b>Destino: </b>
+      <select id="end">
+        <option value='{"lat":4.6364, "lng":-74.0833}'>Universidad Nacional</option>
+        <option value='{"lat":4.649788993494426, "lng":-74.10199003801691}'>Gran Estación</option>
+        <option value='{"lat":4.602032367851377, "lng":-74.07218961588123}'>Museo del Oro</option>
+      </select>
+    </div>
+    <div id="map"></div>
+  </div>
+  <div id="zonaPeligrosa">
+    <p>
+      Parece ser que vas por una zona potencialmente peligrosa. En el mapa encontraras hospitales y cais cerca. Además también hay rutas alternativas que pasan por esos lugares.
+    </p>
+    <div id="cont">
+      <div class="Lugar">
+        <img class="imgLugar"src="./hosSVG.svg">
+        <div class="desc">
+          <div class="titulo">Hospital Mederi</div>
+          <p>Cl. 24 #29-45, Bogotá</p>
+          <select id="but1">
+            <option value="des">Desactivar</option>
+            <option value="act">Activar</option>
+          </select>
+        </div>
+      </div>
+      <div class="Lugar">
+        <img class="imgLugar"src="./police.svg">
+        <div class="desc">
+          <div class="titulo">Cai Samper Mendoza</div>
+          <p>Cra. 22 #1963, Bogotá</p>
+          <select id="but2">
+            <option value="des">Desactivar</option>
+            <option value="act">Activar</option>
+          </select>
+        </div>
+      </div>
+      <div class="Lugar">
+        <img class="imgLugar"src="./police.svg">
+        <div class="desc">
+          <div class="titulo">Cai Rosario</div>
+          <p>Cra. 4 #12c95, Bogotá</p>
+          <select id="but3">
+            <option value="des">Desactivar</option>
+            <option value="act">Activar</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+</body>
+</html>

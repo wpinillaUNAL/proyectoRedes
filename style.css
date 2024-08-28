@@ -1,0 +1,49 @@
+
+/* 
+* Optional: Makes the sample page fill the window. 
+*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+#divIzq{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#cont{
+  display: flex;
+  flex-direction: column;
+}
+#map {
+    height: 80%;
+    width:50%;
+    border-radius: 20px;
+}
+#floating-panel{
+  margin-bottom: 10px;
+}
+#zonaPeligrosa{
+  width: 50%;
+  display: none;
+  flex-direction: column;
+}
+.imgLugar{
+  height: 80px;
+}
+.Lugar{
+  display: flex;
+  margin: 10px 0px 10px 0px;
+  background-color: beige;
+  border-radius: 20px;
+  padding: 5px;
+}
